@@ -12,4 +12,8 @@ describe("String Calculator", () => {
    test("returns sum for two comma-seprated number", () => {
     expect(add("8,2")).toBe(10);
   });
+
+   test("support newline as a seperator", () => {
+    expect(add("8,\n2,1")).toBe(11);
+  });
 });
