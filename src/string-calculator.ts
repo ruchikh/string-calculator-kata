@@ -1,6 +1,6 @@
 export function add(input: string):number {
   if(!input) return 0;
-  let delimiter = /,|\n/;
+  let delimiter = /[,|\n.]/;
   let numStr = input;
   if(input.startsWith("//")) {
       const splitString = input.split('\n');
