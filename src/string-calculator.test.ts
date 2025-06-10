@@ -20,4 +20,8 @@ describe("String Calculator", () => {
   test("support different delimiters", () => {
     expect(add("//;\n8;2")).toBe(10);
   });
+
+  test("throw an exception, negative number not allow for negative numbers", () => {
+    expect(add("1,-2,3,-5")).toBe(10);
+  });
 });
