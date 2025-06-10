@@ -8,5 +8,10 @@ export function add(input: string):number {
       numStr = splitString[1];
   }
   const numbers = numStr.split(delimiter).map(Number);
+
+  const negativeNumber = numbers.filter((n => n < 0))
+  if(negativeNumber.length > 0) {
+    throw new Error(`negative numbers not allowed: ${negativeNumber.join(',')}`)
+  }
   return numbers.reduce((acc, val) => acc + val, 0)
 }

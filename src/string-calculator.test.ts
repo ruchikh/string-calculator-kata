@@ -22,6 +22,6 @@ describe("String Calculator", () => {
   });
 
   test("throw an exception, negative number not allow for negative numbers", () => {
-    expect(add("1,-2,3,-5")).toBe(10);
+    expect(() => add("1,-2,3,-5")).toThrow('negative numbers not allowed: -2,-5');
   });
 });
