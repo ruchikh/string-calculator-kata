@@ -17,7 +17,7 @@ describe("String Calculator", () => {
     expect(add("8,\n2,1")).toBe(11);
   });
 
-  test("Support different delimiters", () => {
+  test("support different delimiters", () => {
     expect(add("//;\n8;2")).toBe(10);
   });
 });
